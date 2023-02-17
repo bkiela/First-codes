@@ -1,4 +1,3 @@
-
 def draw_board(board):
     print(f" {board[0]} | {board[1]} | {board[2]} ")
     print("---+---+---")
@@ -38,8 +37,11 @@ while not winner:
         current_player = "O"
     else:
         current_player = "X"
+
+    if " " not in board and not winner:
+        winner = "Tie"
     
-if winner:
-    print(f"Gratulacje {winner}, wygrales!")
+if winner == "Tie":
+    print("Gra zakonczyla sie remisem. Nikt nie wygral.")
 else:
-    print("Remis.")
+    print(f"Gratulacje {winner}, wygrales!")
