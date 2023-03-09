@@ -18,8 +18,8 @@ while len(gen_pass) < pass_length:
     indx = rnd.randrange(0, len(all_characters))
     sel_symb = all_characters[indx]
     gen_pass.append(sel_symb)
-    "".join(gen_pass)
+    generated_password = "".join(gen_pass)
 
 
 
-print(f"Generated password of length {pass_length} is {(''.join(gen_pass))}")
+print(f"Generated password of length {pass_length} is {generated_password}")
